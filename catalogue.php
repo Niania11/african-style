@@ -1,7 +1,8 @@
-<?php include('view_block/header.php'); ?>
-
-<body>
-<?php include('view_block/menu.php'); ?>
+<?php
+include('view_block/header.php');
+include('data/data.php');
+var_dump(get_products());
+?>
 
 
 <div class="container">

@@ -1,10 +1,4 @@
-
 <?php include('view_block/header.php'); ?>
-
-<body>
-
-    <?php include('view_block/menu.php'); ?>
-
     <div class="container">
         <div class="col-md-12">
 

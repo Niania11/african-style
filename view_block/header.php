@@ -9,3 +9,22 @@
     <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <link href="css/styles.css" rel="stylesheet">
 </head>
+<body>
+<header>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container" style="">
+            <div>
+                <img src="images/image1.jpg" width="758" height="120" />
+            </div>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.php">Acceuil</a>
+            </div>
+            <?php include('view_block/menu.php'); ?>
+        </div>
+    </div>
+</header>
