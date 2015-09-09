@@ -1,6 +1,19 @@
-<?php
-require_once 'data/data.php';
-$view_data['title'] = 'Page de contact';
-require_once 'view_block/_view_header.php';
+<?php include('view_block/header.php'); ?>
 
+<body>
+<?php include('view_block/menu.php'); ?>
+
+
+
+
+
+
+
+
+
+
+
+
+<?php include('view_block/form.php'); ?>
+<?php include('view_block/footer.php'); ?>
 
