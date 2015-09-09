@@ -9,14 +9,16 @@ $menu = array(
     'catalogue' => 'catalogue.php',
     'produit' => 'produit.php');
 
-function mafonction()
+define('model_tissus_ganilla', 'ganilla');
 
-    {
-       array(
-            '102' => array('name'=>'homme', 'prix' => 145,69),
 
-         /*   '136' => array('name'=>'', '' => ),
-            '025' => array('name'=>'', '' =>),*/
-       );
-    }
+
+function get_tissus()
+{
+    return array(
+        '102' => array('model'=>'femme',   'tissus' => model_tissus_ganilla),
+        '136' => array('model'=>'homme',  'tissus' => model_tissus_ganilla),
+
+    );
+}
 
