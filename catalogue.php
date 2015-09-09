@@ -5,8 +5,26 @@ $view_data['footer'] = 'Pied de page';
 require_once 'view_block/_view_header.php';
 require_once 'view_block/_view_footer.php';
 
+//session
+define('PFORMNAME_USERNAME', 'username');
+define('PSESSNAME_USERNAME', 'username');
 
-
+session_start(); // Démarrage mécanisme sessions
+$username = ''; // Variable qui va contenir le username
+if (array_key_exists(PFORMNAME_USERNAME, $_POST)) {
+    // En réception données formulaire
+    $username = $_POST[PFORMNAME_USERNAME];
+    // On met cette valeur en session pour la sauvegarder
+    $_SESSION[PSESSNAME_USERNAME] = $username;
+} else { // On n'est pas en post (en GET donc)
+    if (array_key_exists(PSESSNAME_USERNAME, $_SESSION)) {
+        // On lit le username qui est enregistré dans la session
+        $username = $_SESSION[PSESSNAME_USERNAME];
+    } else {
+        // L'utilisateur vient pour la première fois sur le site
+        $username = '';
+    }
+}
 
 ?>
 
@@ -44,5 +62,21 @@ if (array_key_exists(COOKIE_NAME, $_COOKIE)){
     }
     ?>
 </form>
+
+// session
+<h2>Formulaire simple et session PHP</h2>
+<form name="login" method="post">
+    <label for="username">Username : </label>
+    <input type="text" name="<?= PFORMNAME_USERNAME ?>" id="username" value="<?= $username ?>"/>
+    <input type="submit" name="soumettre" id="soumettre" value="Soumettre"/>
+</form>
+
+
+
 </body>
 </html>
+
+
+
+
+
