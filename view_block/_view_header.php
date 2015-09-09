@@ -1,7 +1,17 @@
 <header>
 
 
+    <style>
 
+        h1{
+            display:inline-block;
+            vertical-align:top;
+            background-color: #2f7dff;
+            height:70px;
+            width:960px;
+            text-align: center;
+        }
+    </style>
 
 
 <!DOCTYPE html>
@@ -20,7 +30,7 @@
         </h1>
     </div>
     <div id="IMG">
-            <img src="image/tissus1.png" alt="TISSU"  width="758" height="120">  </img>
+            <img src="image/tissus1.png" alt="TISSU"  width="960" height="120">  </img>
     </div>
 
         <h2><?php echo $view_data['title']?></h2>

@@ -51,12 +51,9 @@ require_once 'view_block/_view_footer.php';
       <td colspan="2" align="center" valign="middle" class="Style3"><p align="center" class="Style21">&nbsp;</p>
           <p align="center" class="Style21">&nbsp;</p>
           <div id="adress3">
-            <p align="center" class="Style21"><strong>KEUR MOR MATY SARR EL HADJ BA&Icirc;DY SARR GERANT</strong></p>
-            <p class="Style21">Importateur et Distributeur de Produits Cosm&eacute;tiques </p>
-            <p class="Style21">T&eacute;l&eacute;phone Fix&nbsp;:&nbsp;+22133 821 27 46 - 33 842 68 68 - 33 842 10 42 - 33 823 92 63<br />
-              Portable&nbsp;&nbsp;:&nbsp;+221 77 644 61 89<br />
-              E-Mail : mmsarr@orange.sn - mms@mmcosmetics.com<br />
-  &nbsp;Site Web : www.mmscosmetics.com</p>
+            <p align="center" class="Style21"><strong> AFRICAN STYLE SHOP </strong></p>
+            <p class="Style21">Importateur et Distributeur de Produits African</p>
+
           </div>
           <p align="center" class="Style21"><br />
         </p></td>

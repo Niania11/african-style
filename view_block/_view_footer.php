@@ -5,16 +5,16 @@
             display:inline-block;
             vertical-align:top;
             background-color: blue;
-            height:80px;
+            height:70px;
             width:960px;
         }
     </style>
 
     <div id="footer">
 
-    ©2011 Keur Mor Maty SARR Commerçant Import-Export de produits cosmétiques BP 11983 Dakar Peytavin,
+    ©2011 AFRICAN STYLE SHOP Import-Export de produits Africain 10333 rue meilleur,
 
-    Siége : Rond point Sandaga Tél : 33 821 27 46 / 33 842 68 68 / 33 823 92 63 E-mail : mmsarr@orange.sn - mms@mmscosmetics.com - Site Web : www.mmscosmetics.com
+    Siege : pres du metro sauve Tel :4183256769 E-mail : mousto87@hotmail.fr  Site Web : www.mmsafricainstyle.com
 
 
 
