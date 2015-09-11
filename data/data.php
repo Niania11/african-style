@@ -33,6 +33,30 @@ function get_products()
             P_PRICE => 190,
             P_DESCRIP => 'Model pour homme ',
         ),
+  '254' => array(
+            P_NAME => 'Top model ',
+            P_IMG => 'images/img4.jpg',
+            P_PRICE => 190,
+            P_DESCRIP => 'Model pour homme ',
+        ),
+  '814' => array(
+            P_NAME => 'Top model ',
+            P_IMG => 'images/img6.png',
+            P_PRICE => 190,
+            P_DESCRIP => 'Model pour homme ',
+        ),
+  '218' => array(
+            P_NAME => 'Top model ',
+            P_IMG => 'images/img7.jpg',
+            P_PRICE => 190,
+            P_DESCRIP => 'Model pour homme ',
+        ),
+'222' => array(
+            P_NAME => 'Top model ',
+            P_IMG => 'images/img9.jpg',
+            P_PRICE => 190,
+            P_DESCRIP => 'Model pour homme ',
+        ),
 
     );
 }

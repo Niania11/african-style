@@ -38,7 +38,7 @@ include('data/data.php');
     <div class="container">
         <div class="row">
 
-            <div class="col-sm-3">
+            <div class="col-lg-12">
                 <a href="#">
                     <br/>
                     <img class="img-responsive" src="images/img2.jpg" data-alt="" data-title="">

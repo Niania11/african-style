@@ -49,90 +49,88 @@ if (array_key_exists('connect', $_POST)
             <input type="submit" name="disconnect" id="se_deconnecter" value="Déconnexion"/>
         </form>
     <?php } else { ?>
-        <form method="post">
-            <input type="text" name="username" id="username" value="<?php echo isset($username) ? $username : ''; ?>"/><br>
-            <input type="password" name="password" id="password" value="<?php echo isset($password) ? $password : ''; ?>"/><br>
-            <input type="submit" name="connect" id="se_connecter" value="Connexion"/>
-        </form>
+
     <?php } ?>
 </div>
 
-<?php
-define('P_NOM','nom');
-define('P_COURRIEL', 'courriel');
-define('P_MESSAGE', 'message');
-define('P_SEXE', 'sexe');
+
+<div class="col-lg-12"></div>
+    <?php
+    define('P_NOM','nom');
+    define('P_COURRIEL', 'courriel');
+    define('P_MESSAGE', 'message');
+    define('P_SEXE', 'sexe');
 
 
-$validations = array(
-    P_NOM => array(
-        'value' => '',
-        'isValid' => false,
-        'errMsg' => ''
-    ),
-    P_COURRIEL => array(
-        'value' => '',
-        'isValid' => false,
-        'errMsg' => ''
-    ),
-    P_MESSAGE => array(
-        'value' => '',
-        'isValid' => false,
-        'errMsg' => ''
-    ),
-    P_SEXE => array(
-        'value' => '',
-        'isValid' => false,
-        'errMsg' => ''
-    )
-);
+    $validations = array(
+        P_NOM => array(
+            'value' => '',
+            'isValid' => false,
+            'errMsg' => ''
+        ),
+        P_COURRIEL => array(
+            'value' => '',
+            'isValid' => false,
+            'errMsg' => ''
+        ),
+        P_MESSAGE => array(
+            'value' => '',
+            'isValid' => false,
+            'errMsg' => ''
+        ),
+        P_SEXE => array(
+            'value' => '',
+            'isValid' => false,
+            'errMsg' => ''
+        )
+    );
 
-// Vérifie si il y'a bien eu soumission du formulaire
-if ( array_key_exists('soumettre', $_POST) ) {
-    $validations[P_NOM]['value'] = filter_input(INPUT_POST, P_NOM, FILTER_SANITIZE_STRING);
-    $validations[P_NOM]['isValid'] = (strlen($validations[P_NOM]['value']) > 1); // on vérifie si le nb de char est supérieur a 1
-    if (!$validations[P_NOM]['isValid']) { // Si non valid affect un message d'erreur
-        $validations[P_NOM]['errMsg'] = 'NOM: Le nom doit être au minimum de 1 caractère.';
+    // Vérifie si il y'a bien eu soumission du formulaire
+    if ( array_key_exists('soumettre', $_POST) ) {
+        $validations[P_NOM]['value'] = filter_input(INPUT_POST, P_NOM, FILTER_SANITIZE_STRING);
+        $validations[P_NOM]['isValid'] = (strlen($validations[P_NOM]['value']) > 1); // on vérifie si le nb de char est supérieur a 1
+        if (!$validations[P_NOM]['isValid']) { // Si non valid affect un message d'erreur
+            $validations[P_NOM]['errMsg'] = 'NOM: Le nom doit etre au minimum de 1 caractere.';
+        }
+
+        $validations[P_COURRIEL]['value'] = filter_input(INPUT_POST, P_COURRIEL, FILTER_SANITIZE_EMAIL);
+        $validations[P_COURRIEL]['isValid'] = (false !== (filter_var($validations[P_COURRIEL]['value'], FILTER_VALIDATE_EMAIL)));
+        if (!$validations[P_COURRIEL]['isValid']) {
+            $validations[P_COURRIEL]['errMsg'] = 'COURRIEL: Le courriel doit etre un courriel valide.';
+        }
+
+        $validations[P_MESSAGE]['value'] = filter_input(INPUT_POST, P_MESSAGE, FILTER_SANITIZE_STRING);
+        $validations[P_MESSAGE]['isValid'] = (strlen($validations[P_MESSAGE]['value']) > 9); // on vérifie si le nb de char est au minimum de 10
+        if (!$validations[P_MESSAGE]['isValid']) {
+            $validations[P_MESSAGE]['errMsg'] = 'MESSAGE: Le message doit etre au minimum de 10 caracteres.';
+        }
+
+        // on vérifie si une valeur de raison a etais sélectionnée parmis les 4 options déja définie
+        $validations[P_SEXE]['value'] = filter_input(INPUT_POST, P_SEXE, FILTER_SANITIZE_STRING);
+        $option = $validations[P_SEXE]['value'];
+        $validations[P_SEXE]['isValid'] = ( ($option == 'r_renc') || ($option == 'r_conn') || ($option == 'r_trav') || ($option == 'r_sout') );
+        if (!$validations[P_SEXE]['isValid']) {
+            $validations[P_SEXE]['errMsg'] = 'RAISON: Une valeur de raison doit etre selectionnee.';
+        }
+
     }
 
-    $validations[P_COURRIEL]['value'] = filter_input(INPUT_POST, P_COURRIEL, FILTER_SANITIZE_EMAIL);
-    $validations[P_COURRIEL]['isValid'] = (false !== (filter_var($validations[P_COURRIEL]['value'], FILTER_VALIDATE_EMAIL)));
-    if (!$validations[P_COURRIEL]['isValid']) {
-        $validations[P_COURRIEL]['errMsg'] = 'COURRIEL: Le courriel doit être un courriel valide.';
+    $isFormValid = true; // Initialise le formulaire comme valide
+    foreach ($validations as $fields) { // parcours le tableau de validation
+        if(!$fields['isValid']) { // si un des champs n'est pas valide
+            // alors le formulaire n'est plus valide
+            $isFormValid = false;
+            break; // sort de la boucle
+        }
     }
 
-    $validations[P_MESSAGE]['value'] = filter_input(INPUT_POST, P_MESSAGE, FILTER_SANITIZE_STRING);
-    $validations[P_MESSAGE]['isValid'] = (strlen($validations[P_MESSAGE]['value']) > 9); // on vérifie si le nb de char est au minimum de 10
-    if (!$validations[P_MESSAGE]['isValid']) {
-        $validations[P_MESSAGE]['errMsg'] = 'MESSAGE: Le message doit être au minimum de 10 caractères.';
+    // cas formulaire valide
+    if ($isFormValid) {
+        header('Location: index.php'); // l'utulisateur est redirigé vers la page d'acceuil
+        exit(); // on sort du script
     }
 
-    // on vérifie si une valeur de raison a etais sélectionnée parmis les 4 options déja définie
-    $validations[P_SEXE]['value'] = filter_input(INPUT_POST, P_SEXE, FILTER_SANITIZE_STRING);
-    $option = $validations[P_SEXE]['value'];
-    $validations[P_SEXE]['isValid'] = ( ($option == 'r_renc') || ($option == 'r_conn') || ($option == 'r_trav') || ($option == 'r_sout') );
-    if (!$validations[P_SEXE]['isValid']) {
-        $validations[P_SEXE]['errMsg'] = 'RAISON: Une valeur de raison doit être sélectionnée.';
-    }
-
-}
-
-$isFormValid = true; // Initialise le formulaire comme valide
-foreach ($validations as $fields) { // parcours le tableau de validation
-    if(!$fields['isValid']) { // si un des champs n'est pas valide
-        // alors le formulaire n'est plus valide
-        $isFormValid = false;
-        break; // sort de la boucle
-    }
-}
-
-// cas formulaire valide
-if ($isFormValid) {
-    header('Location: index.php'); // l'utulisateur est redirigé vers la page d'acceuil
-    exit(); // on sort du script
-}
-
-?>
+    ?>
 <p class="validation_message">
     <?php
     // cas formulaire non valide

@@ -1,4 +1,4 @@
-<div class="collapse navbar-collapse" style="">
+<div class="collapse navbar-collapse " style="">
     <ul class="nav navbar-nav">
         <li class="">
             <a href="catalogue.php" class="" style="">Catalogue</a>
