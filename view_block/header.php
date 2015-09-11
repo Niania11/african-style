@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Ecommerce Template</title>
+    <title>African_Style</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -14,7 +14,7 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container" style="">
             <div>
-                <img src="images/image1.jpg" width="758" height="120" />
+                <img src="images/image2.png" width="960" height="180" />
             </div>
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">

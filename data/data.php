@@ -10,49 +10,33 @@ function get_products()
 {
     return array(
         '102' => array(
-            P_NAME => 'Chaussette homme',
-            P_IMG => 'images/image1.jpg',
-            P_PRICE => 145, 69,
-            P_DESCRIP => 'Chaussette de luxe',
+            P_NAME => 'tissus de haute couture',
+            P_IMG => 'images/img10.jpg',
+            P_PRICE => 145,
+            P_DESCRIP => 'Model pour femme',
         ),
         '365' => array(
-            P_NAME => 'pantalon homme',
-            P_IMG => 'images/image1.jpg',
-            P_PRICE => 145, 69,
-            P_DESCRIP => 'Chaussette de luxe',
+            P_NAME => 'Bassin riche et Ganilla',
+            P_IMG => 'images/img11.jpg',
+            P_PRICE => 240,
+            P_DESCRIP => 'Model pour couple',
         ),
         '897' => array(
-            P_NAME => 'veste homme',
-            P_IMG => 'images/image1.jpg',
-            P_PRICE => 145, 69,
-            P_DESCRIP => 'Chaussette de luxe',
+            P_NAME => 'Nouveaute Nouveaute',
+            P_IMG => 'images/img12.jpg',
+            P_PRICE => 260,
+            P_DESCRIP => 'Nouveau model ',
         ),
         '214' => array(
-            P_NAME => 'chapeau homme',
-            P_IMG => 'images/image1.jpg',
-            P_PRICE => 145, 69,
-            P_DESCRIP => 'Chaussette de luxe',
+            P_NAME => 'Top model ',
+            P_IMG => 'images/img13.jpg',
+            P_PRICE => 190,
+            P_DESCRIP => 'Model pour homme ',
         ),
 
     );
 }
 
- $menu = array(
-    'Accueil' => 'index.php', // <a href="index.php">Accueil</a>
-    'Contact' => 'contact.php',
-    'catalogue' => 'catalogue.php',
-    'produit' => 'produit.php');
-
-define('model_tissus_ganilla', 'ganilla');
 
 
-
-function get_tissus()
-{
-    return array(
-        '102' => array('model'=>'femme',   'tissus' => model_tissus_ganilla),
-        '136' => array('model'=>'homme',  'tissus' => model_tissus_ganilla),
-
-    );
-}
 

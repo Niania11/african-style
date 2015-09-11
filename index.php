@@ -1,13 +1,12 @@
 <?php
-require_once 'data/data.php';
-$view_data['title'] = 'Page d\'Accueil';
-$view_data['footer'] = 'Pied de page';
-require_once 'view_block/_view_header.php';
-require_once 'view_block/_view_footer.php';
+include('view_block/header.php');
+include('data/data.php');
+//var_dump(get_products());
 ?>
 
-            <div class="center-block text-center">
-                <h1>E-Commerce Template</h1>
+
+<div class="center-block text-center">
+                <h1>AFRICAN-STYLE</h1>
                 <p class="lead">Get Your Style On</p>
             </div>
 
@@ -18,14 +17,13 @@ require_once 'view_block/_view_footer.php';
                         <div class="product col-sm-3"></div>
                         <div class="product col-sm-6">
                             <hr>
-                            <h2>Denim Jacket</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
-                                Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
-                                dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
-                                Aliquam in felis sit amet augue.</p>
+                            <h2>AFRICAN STYLE</h2>
+                            <p>Nous livrons dans tous les pays d'Europe, USA, Canada, Afrique de l'ouest et du centre, Australie a votre adresse.
+                                Des frais de douanes sont a prevoir pour les colis d'une certaine taille a destination d'Afrique et d'Europe du nord
+                                en fonction des reglementations de ces pays..</p>
                             <hr>
-                            <h2 class="text-right">$39</h2>
-                            <button class="btn btn-primary btn-lg ">Add to Cart</button>
+                            <h2 class="text-right">Model de Boubou AfricanStyle</h2>
+
                         </div>
                         <div class="product col-sm-3"></div>
 
@@ -43,31 +41,31 @@ require_once 'view_block/_view_footer.php';
             <div class="col-sm-3">
                 <a href="#">
                     <br/>
-                    <img class="img-responsive" src="http://www.bootply.com/assets/example/ec_socks.jpg" data-alt="" data-title="">
+                    <img class="img-responsive" src="images/img2.jpg" data-alt="" data-title="">
                 </a>
                 <br>
             </div>
 
             <div class="col-sm-9">
 
-                <h2><a class="url" href="#"> Gentleman's Socks</a></h2>
+                <h2><a class="url" href="#"> BOUBOU TRADITIONNEL</a></h2>
 
                 <ul class="list-group ticketView">
                     <li class="list-group-item ticketView">
                         <span class="label label-default">Color</span>
-                        <label> Oatmeal</label>
+                        <label> MARON NOIR</label>
                     </li>
                     <li class="list-group-item ticketView">
                         <span class="label label-default">Material</span>
-                        <label> Cotton</label>
+                        <label> GANILLA</label>
                     </li>
                     <li class="list-group-item ticketView">
                         <span class="label label-default">Sizes</span>
-                        <label> Mens's 5-10, 8-12</label>
+                        <label> LONGUE</label>
                     </li>
                     <li class="list-group-item ticketView">
                         <span class="label label-default">Stock #</span>
-                        N12325
+                        grande quantite
                     </li>
                 </ul>
             </div>
@@ -78,31 +76,31 @@ require_once 'view_block/_view_footer.php';
             <div class="col-sm-3">
                 <a href="#">
                     <br/>
-                    <img class="img-responsive" src="http://www.bootply.com/assets/example/ec_socks.jpg" data-alt="" data-title="">
+                    <img class="img-responsive" src="images/img6.png" data-alt="" data-title="">
                 </a>
                 <br>
             </div>
 
             <div class="col-sm-9">
 
-                <h2><a class="url" href="#"> Gentleman's Socks</a></h2>
+                <h2><a class="url" href="#">BOUBOU FEMME</a></h2>
 
                 <ul class="list-group ticketView">
                     <li class="list-group-item ticketView">
                         <span class="label label-default">Color</span>
-                        <label> Oatmeal</label>
+                        <label> BLANCHE</label>
                     </li>
                     <li class="list-group-item ticketView">
                         <span class="label label-default">Material</span>
-                        <label> Cotton</label>
+                        <label>GANILLA</label>
                     </li>
                     <li class="list-group-item ticketView">
                         <span class="label label-default">Sizes</span>
-                        <label> Mens's 5-10, 8-12</label>
+                        <label> COURTE</label>
                     </li>
                     <li class="list-group-item ticketView">
                         <span class="label label-default">Stock #</span>
-                        N12325
+                        grande quantite
                     </li>
                 </ul>
             </div>
